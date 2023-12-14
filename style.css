@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Bricolage+Grotesque:opsz,wght@10..48,600&family=Lato&family=Orbitron:wght@400;700&family=Pacifico&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Orbitron', sans-serif;
+    font-size:1.2rem;
+
+}
+
+
+.box-1{
+     background-image:url(https://plus.unsplash.com/premium_photo-1675433344518-21eb72dfc7a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80); 
+      grid-area: nature;
+    }
+.box-2{
+     background-image:url(https://images.unsplash.com/photo-1693740571898-47128f049166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80); 
+     grid-area: animal;
+    }
+.box-3{
+     background-image:url(https://images.unsplash.com/photo-1692970125926-a148c488d166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80); 
+     grid-area: bike;
+    }
+.box-4{
+     background-image:url(https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60); 
+     grid-area: car;
+    }
+.box-5{
+     background-image:url(https://plus.unsplash.com/premium_photo-1679079456083-9f288e224e96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80); 
+     grid-area: gadget;
+    }
+.box-6{
+     background-image:url(https://images.unsplash.com/photo-1504333638930-c8787321eee0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80); 
+     grid-area: galaxy;
+    }
+.box-7{
+     background-image:url(https://images.unsplash.com/photo-1581093803931-46e730e7622e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80); 
+     grid-area: technology;
+    }
+.container{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 40% 60%;
+    justify-content: space-evenly;
+    align-content: center;
+    gap:25px;
+    padding: 2em;
+    background:linear-gradient(to right, #022210, #2a7553);
+}
+.left-text{
+    align-self:center;
+}
+
+.heading{
+    font-size:2.5rem;
+    margin-bottom:10px;
+    color:#ffffffac;
+    text-align: center;
+
+    transition: color 1s ease-in;
+}
+.sub-heading{
+    text-align:center;
+    color:#ffffff9c;
+}
+
+/* set the gallery by use of grid  */
+
+.gallery{
+    flex-basis:50%;
+
+    display:grid;
+    gap:5px;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 130px;
+
+    /* Now set/ span the galaxy grid */
+    grid-template-areas: 
+             "nature animal animal"
+             "nature bike car"
+             "gadget gadget car"
+             "galaxy technology technology"
+}
+
+.box{
+    background-size:cover;
+    background-position: top;
+    color:#ffffffcc;
+    /* below grid for align images text to center  */
+    display:grid;
+    place-items: center;
+
+    background-color :#222;
+    background-blend-mode:color-dodge;
+
+    transition: all 1.2s ease-in-out;
+}
+
+.box:hover{
+    background-color:#ffffff11;
+    background-position:center;
+    background-size:cover;
+
+    box-shadow:0 0 4px #ffffff;
+    
+}
+
+.heading:hover{
+    color:#ffffffaa;
+    cursor: pointer;
+}
